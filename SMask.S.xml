@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SMask xmlns="http://www.vito.be/CDPC/SMask">
+<Grids>
+  <Grid
+	input="poppo-s.jpg"
+	method="remap|felzenszwalb|segmentor"
+
+	re-map-input="poppo-s.jpg"
+	re-map-equivalence-classes="72 255 1"
+	re-map-default="0"
+	re-map-output="remapped-poppo-s.jpg"
+
+	felzen-segm-input="remapped-poppo-s.jpg"
+	felzen-segm-output="felzenszwalb-remapped-poppo-s.jpg"
+	felzen-segm-sigma="0.5"
+	felzen-segm-kappa="1000"
+	felzen-segm-minsize="250"
+
+		rle-segments-input="remapped-poppo-s.jpg"
+		rle-segments-output="rle-remapped-poppo-s.jpg"
+		rle-segments-python="rle-remapped-pythonpoppo-s.jpg"
+		rle-segments-min-area="10"
+  />
+</Grids></SMask>
